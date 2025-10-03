@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa Interativo — Mundo Social</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #88c070;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  #mapa {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('1000412020.png') center/cover no-repeat; /* Troque para sua imagem de mapa */
+  }
+  .botao {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.85);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s;
+  }
+  .botao:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: white;
+  }
+  .youtube { top: 40%; left: 25%; }
+  .tiktok { top: 40%; left: 75%; }
+  .doadores { bottom: 10%; left: 80%; }
+  .ponte { top: 50%; left: 50%; background: #ddd; }
+</style>
+</head>
+<body>
+  <div id="mapa">
+    <div class="botao youtube" onclick="window.open('https://www.youtube.com/', '_blank')">🏰 YouTube</div>
+    <div class="botao tiktok" onclick="window.open('https://www.tiktok.com/', '_blank')">🏰 TikTok</div>
+    <div class="botao ponte" onclick="alert('Você está na ponte!')">🌉 Ponte</div>
+    <div class="botao doadores" onclick="alert('Área dos Doadores')">💰 Doadores</div>
+  </div>
+</body>
+</html>
